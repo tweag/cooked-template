@@ -6,3 +6,11 @@ A template to write offchain (or audit) code for Cardano smart contracts
 
 * `cooked-offchain` is meant to host the offchain code of the project and/or the audit code.
 * `project-onchain` is meant to host the onchain code the the DApp. 
+
+## Development environement
+
+Run `nix develop`
+
+## Running the code
+
+Run `cabal run cooked-offchain`
