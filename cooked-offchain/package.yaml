@@ -1,0 +1,51 @@
+verbatim:
+  cabal-version: 3.4
+
+name: cooked-offchain
+version: 0.0.0
+
+dependencies:
+  - base
+  - bytestring
+  - containers
+  - data-default
+  - nonempty-containers
+  - optics-core
+  - plutus-ledger
+  - plutus-ledger-api
+  - plutus-script-utils
+  - plutus-tx
+  - plutus-tx-plugin
+  - prettyprinter
+  - QuickCheck
+  - tasty
+  - tasty-expected-failure
+  - tasty-hunit
+  - cooked-validators
+  - project-onchain
+  - cardano-node-emulator
+
+library:
+  source-dirs: src
+  ghc-options:
+    -Wall
+    -Wno-missed-extra-shared-lib
+    -fobject-code
+    -fno-ignore-interface-pragmas
+    -fignore-hpc-changes
+    -fno-omit-interface-pragmas
+    -fplugin-opt PlutusTx.Plugin:defer-errors
+    -fplugin-opt PlutusTx.Plugin:conservative-optimisation
+  default-extensions:
+    - ImportQualifiedPost
+    - NumericUnderscores
+    - OverloadedStrings
+
+executable:
+  main: Main.hs
+  source-dirs: src
+  dependencies: cooked-offchain
+  ghc-options:
+    -Wall
+  default-extensions:
+    - ImportQualifiedPost

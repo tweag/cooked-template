@@ -1,0 +1,12 @@
+dist-newstyle
+.direnv
+.envrc
+.projectile
+.vscode
+.#*
+*#
+*.artifact
+*.swp
+docs/
+.pre-commit-config.yaml
+cooked-offchain/src/Main

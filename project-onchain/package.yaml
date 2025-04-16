@@ -1,0 +1,33 @@
+verbatim:
+  cabal-version: 3.4
+
+name: project-onchain
+version: 0.0.0
+
+dependencies:
+  - base
+  - bytestring
+  - containers
+  - data-default
+  - nonempty-containers
+  - optics-core
+  - plutus-ledger
+  - plutus-ledger-api
+  - plutus-script-utils
+  - plutus-tx
+  - plutus-tx-plugin
+
+library:
+  source-dirs: src
+  ghc-options:
+    -Wall
+    -Wno-missed-extra-shared-lib
+    -fobject-code
+    -fno-ignore-interface-pragmas
+    -fignore-hpc-changes
+    -fno-omit-interface-pragmas
+    -fplugin-opt PlutusTx.Plugin:defer-errors
+  default-extensions:
+    - ImportQualifiedPost
+    - NumericUnderscores
+    - OverloadedStrings

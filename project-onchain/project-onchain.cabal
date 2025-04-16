@@ -1,0 +1,35 @@
+cabal-version: 3.4
+
+-- This file has been generated from package.yaml by hpack version 0.36.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           project-onchain
+version:        0.0.0
+build-type:     Simple
+
+library
+  other-modules:
+      Paths_project_onchain
+  autogen-modules:
+      Paths_project_onchain
+  hs-source-dirs:
+      src
+  default-extensions:
+      ImportQualifiedPost
+      NumericUnderscores
+      OverloadedStrings
+  ghc-options: -Wall -Wno-missed-extra-shared-lib -fobject-code -fno-ignore-interface-pragmas -fignore-hpc-changes -fno-omit-interface-pragmas -fplugin-opt PlutusTx.Plugin:defer-errors
+  build-depends:
+      base
+    , bytestring
+    , containers
+    , data-default
+    , nonempty-containers
+    , optics-core
+    , plutus-ledger
+    , plutus-ledger-api
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
+  default-language: Haskell2010
